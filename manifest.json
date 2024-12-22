@@ -1,14 +1,20 @@
 {
   "manifest_version": 3,
-  "name": "YouTube Music Volume Slider",
-  "version": "1.0.1",
-  "description": "Modifies the YouTube Music volume slider for easier volume changes.",
+  "name": "YouTube Music Manager",
+  "version": "1.1.0",
+  "description": "Extension adds volume percentages, improves slider responsiveness, and features Auto-Pause to smartly manage playback with media.",
   "action": {
     "default_icon": {
       "16": "icon.png",
       "48": "icon.png",
       "128": "icon.png"
-    }
+    },
+    "default_popup": "popup.html"
+  },
+  "icons": {
+    "16": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
   },
   "content_scripts": [
     {
@@ -24,9 +30,12 @@
   "host_permissions": [
     "https://music.youtube.com/*"
   ],
-  "icons": {
-    "16": "icon.png",
-    "48": "icon.png",
-    "128": "icon.png"
+  "permissions": [
+    "tabs",
+    "storage",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
   }
 }
