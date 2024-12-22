@@ -1,8 +1,8 @@
 {
-  "manifest_version": 4,
+  "manifest_version": 3,
   "name": "YouTube Music Manager",
   "version": "1.1.0",
-  "description": "YouTube Music Manager adds volume percentages, improves slider responsiveness, and features Auto-Pause to smartly manage playback with other media.",
+  "description": "Extension adds volume percentages, improves slider responsiveness, and features Auto-Pause to smartly manage playback with media.",
   "action": {
     "default_icon": {
       "16": "icon.png",
