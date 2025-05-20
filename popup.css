@@ -20,6 +20,7 @@ h1 {
     display: inline-block;
     width: 60px;
     height: 34px;
+    margin-right: 18px;
 }
 
 .switch input {
@@ -67,6 +68,12 @@ input:checked + .slider:before {
     color: #333;
 }
 
+#status {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
 .popup-header {
     display: flex;
     align-items: center;
@@ -104,6 +111,8 @@ input:checked + .slider:before {
     flex-direction: column;
     gap: 18px;
     box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.12);
+    min-height: 350px;
+    justify-content: center;
 }
 .section-title {
     font-size: 1.05rem;
@@ -401,6 +410,15 @@ input:checked + .slider:before {
     height: 22px;
     margin: 0 auto;
     box-shadow: 0 0 0 1.5px #aaa2;
+}
+
+.auto-pause-row {
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 40px 0;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 @media (max-width: 400px) {
