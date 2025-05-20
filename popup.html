@@ -2,19 +2,96 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>YouTube Music Manager</title>
+        <title>YouTube Music Manager – Settings</title>
         <link rel="stylesheet" href="popup.css" />
     </head>
     <body>
-        <div class="container">
-            <h1>YouTube Music Manager</h1>
-            <label class="switch">
-                <input type="checkbox" id="workerToggle" />
-                <span class="slider"></span>
-            </label>
-            <div class="status" id="status">Auto-Pause Manager: OFF</div>
+        <div class="popup-header">
+            <img
+                src="icon.png"
+                alt="YouTube Music Manager Icon"
+                class="popup-logo"
+            />
+            <span class="popup-title">YouTube Music Manager</span>
         </div>
-
-        <script src="popup.js" type="module"></script>
+        <div class="divider"></div>
+        <div class="container">
+            <h2 class="section-title">Custom Volume Slider Width</h2>
+            <div class="slider-container">
+                <input
+                    type="range"
+                    id="width-slider"
+                    min="10"
+                    max="100"
+                    step="1"
+                />
+                <span id="width-label">100%</span>
+            </div>
+            <div class="slider-container min-width-row">
+                <label for="min-width-input" class="min-width-label"
+                    >Min width (px):</label
+                >
+                <input
+                    type="number"
+                    id="min-width-input"
+                    min="200"
+                    max="500"
+                    step="1"
+                />
+                <span class="min-width-range">(range 200–500)</span>
+            </div>
+            <div class="slider-container slider-style-row">
+                <label for="slider-style-select" class="slider-style-label"
+                    >Slider style:</label
+                >
+                <div class="slider-style-btns">
+                    <button
+                        id="slider-style-circle"
+                        type="button"
+                        class="slider-style-btn"
+                        title="Circle"
+                    >
+                        <span
+                            class="slider-style-icon slider-style-icon-circle"
+                        ></span>
+                    </button>
+                    <button
+                        id="slider-style-line"
+                        type="button"
+                        class="slider-style-btn"
+                        title="Line"
+                    >
+                        <span
+                            class="slider-style-icon slider-style-icon-line"
+                        ></span>
+                    </button>
+                </div>
+            </div>
+            <div class="divider divider-section"></div>
+            <div class="slider-container auto-pause-row">
+                <label class="switch">
+                    <input type="checkbox" id="workerToggle" />
+                    <span class="slider"></span>
+                </label>
+                <span id="status">Auto-Pause Manager: OFF</span>
+            </div>
+        </div>
+        <div class="popup-footer">
+            <div class="footer-left">
+                <span class="footer-year">©2025</span>
+                <span class="footer-brand">YouTube Music Manager</span>
+            </div>
+            <div class="footer-right">
+                <span class="footer-version">v1.3.1</span>
+                <a
+                    href="https://xsiadron.com/"
+                    class="footer-link"
+                    target="_blank"
+                    rel="noopener"
+                    >xsiadron.com</a
+                >
+            </div>
+        </div>
+        <script src="popup.js"></script>
     </body>
 </html>
